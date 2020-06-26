@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: white;
+}
+
+/* MultiPage Styling */
+
+a {
+  text-decoration: none;
+}
+
+.background-image {
+  height: 100vh;
+  background-image: url(../img/stadium.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  object-fit: cover;
+  overflow-Y: scroll;
+}
+
+.btn {
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(59, 121, 59);
+  box-shadow: 4px 4px 3px 0px rgba(0,0,0,0.9);
+  padding: 0.5rem 1.1rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  cursor: pointer;
+  color: white;
+}
+
+.btn-nav {
+  background-color: rgb(214, 145, 18);
+}
+
+.btn-red {
+  background-color: rgb(197, 52, 52);
+}
+
+.btn-blue {
+  background-color: rgb(54, 97, 153);
+}
+
+.btn-center {
+  margin: 0 auto;
+}
+
+.btn-footer {
+  display: block;
+  margin: 0 auto;
+}
+
+.label {
+  font-size: 1.3rem;
+  margin-right: 0.9rem;
+}
+
+.rating-range {
+  width: 12rem;
+  margin-right: 1.1rem;
+}
+
+.input {
+  background-color: white;
+  outline: none;
+  border-radius: 6px;
+  height: 2rem;
+  margin-bottom: 0.6rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
