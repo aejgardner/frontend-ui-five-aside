@@ -2,7 +2,9 @@ import React, { Component } from "react";
 
 import { Link } from "react-router-dom";
 
-import Header from "../components/Header";
+import Header from "../Header";
+import Player from "../Player";
+import PlayerRating from "../PlayerRating";
 
 class Players extends Component {
     constructor(props) {
@@ -86,7 +88,7 @@ class Players extends Component {
                     <label className="label" htmlFor="player_name">Add a player: </label>
                     <input className="input player-input" id="player_name" onChange={this.handleChange} value={player_name} placeholder="Enter player's name"></input>
                     <p className="label">Player rating:</p>
-                    <PlayerRatingRange handleRange={(e) => this.handleRange(e)} fontColour="white" />
+                    <PlayerRating handleRange={(e) => this.handleRange(e)} fontColour="white" />
                     <button className="btn" style={{ visibility: hidden ? "hidden" : "visible" }}>Add</button>
                     {/* This error message appears when the form data is invalid */}
                 </form>
@@ -116,12 +118,12 @@ class Players extends Component {
                         <p className="error">There are no players, add some above to get creating your teams!</p>
                     }
                     <div className="settings-and-prev-btn">
-                        <Settings
+                        {/* <Settings
                             teamOneName={team_one_name}
                             teamTwoName={team_two_name}
                             teamOneColour={team_one_colour}
                             teamTwoColour={team_two_colour}
-                        />
+                        /> */}
                         <Link to="/match-history">
                             <button
                                 className="btn btn-nav btn-footer"

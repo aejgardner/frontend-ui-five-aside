@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PlayerRatingRange from "../components/PlayerRatingRange/PlayerRatingRange"
+import PlayerRating from "../../components/PlayerRating";
 
 class Player extends Component {
     constructor(props) {
@@ -85,7 +85,7 @@ class Player extends Component {
                             onChange={this.handleChange}
                             value={player_name}
                         />
-                        <PlayerRatingRange
+                        <PlayerRating
                             handleRange={(e) => this.handleRange(e)}
                             fontColour="black"
                         />
