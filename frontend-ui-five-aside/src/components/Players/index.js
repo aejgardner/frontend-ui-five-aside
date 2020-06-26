@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 // import in the Players component
 import Players from "./Players";
 
-import { getPlayers } from "../../data/actions/api";
+import { getPlayers, postPlayer } from "../../data/actions/api";
 
 const mapStateToProps = state => {
     return {
@@ -15,6 +15,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         handleLoad: () => dispatch(getPlayers()),
+        handleSubmit: (player_name, player_rating) => dispatch(postPlayer(player_name, player_rating)),
     };
 };
 
