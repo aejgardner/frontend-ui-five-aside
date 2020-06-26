@@ -1,6 +1,6 @@
 import axios from "../axios";
 
-import { setPlayers, addPlayer } from "./state";
+import { setPlayers, addPlayer, resetPlayers } from "./state";
 
 // gets the list of players from the database, returns an array of objects to be used in the state action
 export const getPlayers = () => dispatch => {
@@ -18,5 +18,13 @@ export const postPlayer = (player_name, player_rating) => dispatch => {
     }).then(({ data }) => {
         const player = data.data;
         dispatch(addPlayer(player));
+    });
+};
+
+
+// resets the database, returns nothing, calls the resetPlayers state action
+export const deletePlayers = () => dispatch => {
+    axios.delete("/players").then(() => {
+        dispatch(resetPlayers());
     });
 };

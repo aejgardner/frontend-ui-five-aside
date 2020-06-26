@@ -20,6 +20,7 @@ const reducer = (state, action) => {
     switch (action.type) {
         case "SET_PLAYERS": return setPlayers(state, action);
         case "ADD_PLAYER": return addPlayer(state, action);
+        case "RESET_PLAYERS": return initial;
         default: return state;
     }
 };

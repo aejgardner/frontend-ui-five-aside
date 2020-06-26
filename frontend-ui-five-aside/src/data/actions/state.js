@@ -11,3 +11,9 @@ export const addPlayer = (player) => {
         player: player,
     };
 };
+
+export const resetPlayers = () => {
+    return {
+        type: "RESET_PLAYERS",
+    };
+};
