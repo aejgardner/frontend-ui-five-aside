@@ -15,10 +15,10 @@ class CreateMatchesTable extends Migration
     {
         Schema::create('matches', function (Blueprint $table) {
             $table->id();
-            $table->string("team_one_name", 50)->default('');
-            $table->integer("team_one_score")->default(0);
-            $table->string("team_two_name", 50)->default('');
-            $table->integer("team_two_score")->default(0);
+            $table->string("team_one_name", 50);
+            $table->integer("team_one_score");
+            $table->string("team_two_name", 50);
+            $table->integer("team_two_score");
             $table->json("team_one_players")->nullable();
             $table->json("team_two_players")->nullable();
             $table->timestamps();

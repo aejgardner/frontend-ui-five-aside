@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\Players;
+use App\Http\Controllers\API\Matches;
 
 /*
 |--------------------------------------------------------------------------
