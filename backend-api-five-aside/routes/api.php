@@ -33,3 +33,13 @@ Route::group(["prefix" => "players"], function () {
     Route::patch("{player}", [Players::class, "update"]);
     Route::get("teams", [Players::class, "assign"]);
 });
+
+
+// assigns "previous-matches" prefix to requests
+Route::group(["prefix" => "previous-matches"], function () {
+
+    // requests for posting a completed match, getting all previous matches and deleting all previous matches
+    Route::post("", [Matches::class, "store"]);
+    Route::get("", [Matches::class, "index"]);
+    Route::delete("", [Matches::class, "clear"]);
+});
