@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Header from "../Header";
 import Player from "../Player";
 import PlayerRating from "../PlayerRating";
+import Settings from "../Settings";
 
 class Players extends Component {
     constructor(props) {
@@ -118,12 +119,12 @@ class Players extends Component {
                         <p className="error">There are no players, add some above to get creating your teams!</p>
                     }
                     <div className="settings-and-prev-btn">
-                        {/* <Settings
+                        <Settings
                             teamOneName={team_one_name}
                             teamTwoName={team_two_name}
                             teamOneColour={team_one_colour}
                             teamTwoColour={team_two_colour}
-                        /> */}
+                        />
                         <Link to="/match-history">
                             <button
                                 className="btn btn-nav btn-footer"

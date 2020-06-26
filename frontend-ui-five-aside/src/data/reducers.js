@@ -44,12 +44,26 @@ const removePlayer = (state, { id }) => {
     };
 };
 
+// Settings reducer
+
+// takes the values the user has submitted upon saving settings and assigns them to their corresponding properties in global state, all done on the front end
+const setSettings = (state, { settings }) => {
+    return {
+        ...state,
+        team_one_name: settings.team_one_name,
+        team_two_name: settings.team_two_name,
+        team_one_colour: settings.team_one_colour,
+        team_two_colour: settings.team_two_colour,
+    };
+};
+
 const reducer = (state, action) => {
     switch (action.type) {
         case "SET_PLAYERS": return setPlayers(state, action);
         case "ADD_PLAYER": return addPlayer(state, action);
         case "EDIT_PLAYER": return editPlayer(state, action);
         case "REMOVE_PLAYER": return removePlayer(state, action);
+        case "SET_TEAM_SETTINGS": return setSettings(state, action);
         case "RESET_PLAYERS": return initial;
         default: return state;
     }

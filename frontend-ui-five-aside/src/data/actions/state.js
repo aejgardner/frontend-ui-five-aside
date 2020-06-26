@@ -31,3 +31,10 @@ export const resetPlayers = () => {
         type: "RESET_PLAYERS",
     };
 };
+
+export const saveTeamSettings = (data) => {
+    return {
+        type: "SET_TEAM_SETTINGS",
+        settings: data,
+    };
+};
