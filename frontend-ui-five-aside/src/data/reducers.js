@@ -36,11 +36,20 @@ const editPlayer = (state, { player }) => {
     };
 };
 
+// returns a new array of objects without the player object with the corresponding id and overwrites the existing players array
+const removePlayer = (state, { id }) => {
+    return {
+        ...state,
+        players: state.players.filter(player => player.id !== id)
+    };
+};
+
 const reducer = (state, action) => {
     switch (action.type) {
         case "SET_PLAYERS": return setPlayers(state, action);
         case "ADD_PLAYER": return addPlayer(state, action);
         case "EDIT_PLAYER": return editPlayer(state, action);
+        case "REMOVE_PLAYER": return removePlayer(state, action);
         case "RESET_PLAYERS": return initial;
         default: return state;
     }

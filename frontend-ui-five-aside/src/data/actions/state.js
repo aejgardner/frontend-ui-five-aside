@@ -19,6 +19,13 @@ export const editPlayer = (player) => {
     };
 };
 
+export const removePlayer = (id) => {
+    return {
+        type: "REMOVE_PLAYER",
+        id: id
+    };
+};
+
 export const resetPlayers = () => {
     return {
         type: "RESET_PLAYERS",
