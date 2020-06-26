@@ -12,6 +12,13 @@ export const addPlayer = (player) => {
     };
 };
 
+export const editPlayer = (player) => {
+    return {
+        type: "EDIT_PLAYER",
+        player: player,
+    };
+};
+
 export const resetPlayers = () => {
     return {
         type: "RESET_PLAYERS",
