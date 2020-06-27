@@ -44,6 +44,14 @@ const removePlayer = (state, { id }) => {
     };
 };
 
+// takes the players array which has now been assigned team numbers for each player and overwrites the previous array with unassigned teams
+const makeTeams = (state, { players }) => {
+    return {
+        ...state,
+        players: players,
+    };
+};
+
 // Settings reducer
 
 // takes the values the user has submitted upon saving settings and assigns them to their corresponding properties in global state, all done on the front end
@@ -63,8 +71,9 @@ const reducer = (state, action) => {
         case "ADD_PLAYER": return addPlayer(state, action);
         case "EDIT_PLAYER": return editPlayer(state, action);
         case "REMOVE_PLAYER": return removePlayer(state, action);
-        case "SET_TEAM_SETTINGS": return setSettings(state, action);
         case "RESET_PLAYERS": return initial;
+        case "MAKE_TEAMS": return makeTeams(state, action);
+        case "SET_TEAM_SETTINGS": return setSettings(state, action);
         default: return state;
     }
 };

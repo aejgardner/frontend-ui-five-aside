@@ -1,6 +1,6 @@
 import axios from "../axios";
 
-import { setPlayers, addPlayer, resetPlayers, editPlayer, removePlayer } from "./state";
+import { setPlayers, addPlayer, resetPlayers, editPlayer, removePlayer, makeTeams } from "./state";
 
 // gets the list of players from the database, returns an array of objects to be used in the state action
 export const getPlayers = () => dispatch => {
@@ -43,5 +43,13 @@ export const deletePlayer = (id) => dispatch => {
 export const deletePlayers = () => dispatch => {
     axios.delete("/players").then(() => {
         dispatch(resetPlayers());
+    });
+};
+
+// triggers the assign teams public function in the database which sets the team value in each player object to either 1 or 2 based on their rating (see the logic in the teams-api). Returns the entire updated players array of objects and passes that to the state action
+export const assignTeams = () => dispatch => {
+    axios.get("/players/teams").then(({ data }) => {
+        const players = data
+        dispatch(makeTeams(players));
     });
 };

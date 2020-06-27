@@ -32,6 +32,13 @@ export const resetPlayers = () => {
     };
 };
 
+export const makeTeams = (players) => {
+    return {
+        type: "MAKE_TEAMS",
+        players: players,
+    };
+};
+
 export const saveTeamSettings = (data) => {
     return {
         type: "SET_TEAM_SETTINGS",
