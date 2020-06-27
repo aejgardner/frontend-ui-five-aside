@@ -86,7 +86,7 @@ class Players extends Component {
                 <h3 className="sub-heading">Enter at least 4 names to generate two random teams.</h3>
                 {/* the form which allows users to submit new players, this is always rendered */}
                 <form className="player-form" onSubmit={this.handleSubmit}>
-                    <label className="label" htmlFor="player_name">Add a player: </label>
+                    <label className="label" htmlFor="player_name">Add a player:</label>
                     <input className="input player-input" id="player_name" onChange={this.handleChange} value={player_name} placeholder="Enter player's name"></input>
                     <p className="label">Player rating:</p>
                     <PlayerRating handleRange={(e) => this.handleRange(e)} fontColour="white" />
