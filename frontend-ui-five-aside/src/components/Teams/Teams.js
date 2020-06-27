@@ -61,7 +61,7 @@ class Teams extends Component {
 
         // finds out the average team rating based on each player's rating
         let averageRating = Math.round(players.reduce((acc, player) => {
-            return acc + player.skill;
+            return acc + player.player_rating;
         }, 0) / players.length);
 
         return (
