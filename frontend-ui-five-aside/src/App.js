@@ -1,6 +1,7 @@
 import React from "react";
 import Players from "./components/Players";
 import Teams from "./components/Teams";
+import Loading from "./components/Loading/Loading";
 
 import {
   BrowserRouter as Router,
@@ -12,6 +13,7 @@ const App = () => (
     <React.Fragment>
       <Route exact path="/" component={Players} />
       <Route path="/team-sheet" component={Teams} />
+      <Loading />
     </React.Fragment>
   </Router>
 );
