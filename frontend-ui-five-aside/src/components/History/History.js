@@ -27,7 +27,7 @@ class History extends Component {
                         <h2 className="no-games-message">No games played!</h2>
                         <Link to="/">
                             <button
-                                className="btn nav-btn btn-footer"
+                                className="btn btn-footer"
                                 type="button">Home
                     </button>
                         </Link>
@@ -61,12 +61,11 @@ class History extends Component {
                         <button
                             onClick={this.handleClearHistory}
                             className="btn btn-red clear-history-btn"
-                            style={{ display: "block" }}
                         >Clear previous matches
                 </button>
                         <Link to="/">
                             <button
-                                className="btn btn-nav btn-footer"
+                                className="btn btn-footer"
                                 type="button">Home
                     </button>
                         </Link>
