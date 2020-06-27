@@ -76,6 +76,13 @@ const saveHistory = (state, { history }) => {
     };
 };
 
+const addMatchToHistory = (state, { match }) => {
+    return {
+        ...state,
+        history: [...state.history, match]
+    };
+};
+
 // resets history to an empty array while preserving rest of the current state
 const resetHistory = (state) => {
     return {
@@ -94,6 +101,7 @@ const reducer = (state, action) => {
         case "MAKE_TEAMS": return makeTeams(state, action);
         case "SET_TEAM_SETTINGS": return setSettings(state, action);
         case "SAVE_HISTORY": return saveHistory(state, action);
+        case "ADD_MATCH": return addMatchToHistory(state, action);
         case "RESET_HISTORY": return resetHistory(state);
         default: return state;
     }

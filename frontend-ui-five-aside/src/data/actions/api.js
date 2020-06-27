@@ -8,7 +8,8 @@ import {
     removePlayer,
     makeTeams,
     resetHistory,
-    saveHistory
+    saveHistory,
+    addMatchToHistory
 } from "./state";
 
 // gets the list of players from the database, returns an array of objects to be used in the state action
@@ -63,13 +64,31 @@ export const assignTeams = () => dispatch => {
     });
 };
 
-// requests to matches table in db
+// Requests to matches table in db
 
 // gets the list of matches from the database, returns an array of objects to be used in the state action
 export const getPreviousMatches = () => dispatch => {
     axios.get("/previous-matches").then(({ data }) => {
         const history = data;
         dispatch(saveHistory(history));
+    });
+};
+
+// creates a match with the team names and scores the user entered, returns the new player object to be used in the state action
+export const postMatch = (match, team_one_players, team_two_players) => dispatch => {
+    // unsure whether arrays must be converetd to JSON as they are stored as JSON in db
+    const json_team_one_players = JSON.stringify(team_one_players);
+    const json_team_two_players = JSON.stringify(team_two_players);
+    axios.post("/previous-matches", {
+        team_one_name: match.team_one_name,
+        team_one_score: match.team_one_score,
+        team_two_name: match.team_two_name,
+        team_two_score: match.team_two_score,
+        team_one_players: json_team_one_players,
+        team_two_players: json_team_two_players,
+    }).then(({ data }) => {
+        const match = data.data;
+        dispatch(addMatchToHistory(match));
     });
 };
 

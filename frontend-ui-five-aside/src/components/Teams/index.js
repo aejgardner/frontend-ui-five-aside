@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 // import in the Teams component
 import Teams from "./Teams"
 
-import { assignTeams } from "../../data/actions/api";
+import { assignTeams, postMatch } from "../../data/actions/api";
 
 const mapStateToProps = state => {
     return {
@@ -20,6 +20,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         onLoad: () => dispatch(assignTeams()),
+        handleSubmit: (match, team_one_players, team_two_players) => dispatch(postMatch(match, team_one_players, team_two_players)),
     };
 };
 

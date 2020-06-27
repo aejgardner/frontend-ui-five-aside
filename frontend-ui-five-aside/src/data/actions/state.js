@@ -53,6 +53,13 @@ export const saveHistory = (history) => {
     };
 };
 
+export const addMatchToHistory = (match) => {
+    return {
+        type: "ADD_MATCH",
+        match: match,
+    };
+};
+
 export const resetHistory = () => {
     return {
         type: "RESET_HISTORY",
