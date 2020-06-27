@@ -1,0 +1,92 @@
+/* Teams Component */
+
+.teams-wrapper {
+    max-width: 68%;
+    min-width: 500px;
+    margin: 1.6rem auto 0.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .team-group {
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 4px 4px 3px 0px rgba(0,0,0,0.9);
+    border-radius: 6px;
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  
+  .team-name {
+    font-size: 3rem;
+    margin: 1rem 0;
+    text-align: center;
+  }
+  
+  .team-rating {
+    color: yellow;
+    font-style: italic;
+    letter-spacing: 0.1rem;
+  }
+  
+  .team-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .team-player {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .btn-change-players {
+    display: block;
+    margin: 1.4rem auto 1.4rem;
+  }
+  
+  .score-form {
+    background-color:hsla(55, 65%, 89%, 0.7);
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.9);
+    border-radius: 6px;
+    padding: 1rem 1rem 2rem;
+    align-self: flex-start;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }
+
+  .score-team {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .score-input {
+    text-align: left;
+    padding-left: 0.7rem;
+    margin-bottom: 2rem;
+    height: 2rem;
+    width: 80%;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .teams-wrapper {
+      flex-direction: column;
+    }
+
+    .team-group {
+      margin-bottom: 2rem;
+    }
+
+    .score-form {
+      align-self: center;
+      margin-bottom: 2rem;
+      order: 3;
+    }
+  }
