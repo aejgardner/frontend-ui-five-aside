@@ -34,10 +34,10 @@ class Teams extends Component {
     }
 
     // submits the final score, team names and the players for each team to the history table in the DB
-    handleSubmit(e, team_one_players, team_two_players) {
+    handleSubmit(e) {
         e.preventDefault();
 
-        this.props.handleSubmit(this.state, team_one_players, team_two_players)
+        this.props.handleSubmit(this.state)
 
         // resets score form after user submits final score
         this.setState({
@@ -76,7 +76,7 @@ class Teams extends Component {
                     />
                     <form
                         className="score-form"
-                        onSubmit={e => this.handleSubmit(e, team_one_players, team_two_players)}
+                        onSubmit={this.handleSubmit}
                     >
                         <h2 className="team-name">Final Score</h2>
                         <h3 className="score-team">{team_one_name}</h3>
