@@ -53,10 +53,9 @@ class Players extends Component {
 
         this.props.handleSubmit(player_name, player_rating);
 
-        // resets the state to it's initial values so the user can add more players easily
+        // resets the player_name state property so the user can add more players easily
         this.setState({
             player_name: "",
-            player_rating: "10"
         });
     }
 
