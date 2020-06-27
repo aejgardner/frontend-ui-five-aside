@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 // import in the Teams component
 import Teams from "./Teams"
 
+import { assignTeams } from "../../data/actions/api";
+
 const mapStateToProps = state => {
     return {
         players: state.players,

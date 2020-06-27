@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Header from "../Header";
+import TeamGroup from "../TeamGroup";
 
 class Teams extends Component {
     constructor(props) {
