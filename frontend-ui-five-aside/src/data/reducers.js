@@ -65,6 +65,16 @@ const setSettings = (state, { settings }) => {
     };
 };
 
+// History reducers
+
+// resets history to an empty array while preserving rest of the current state
+const resetHistory = (state) => {
+    return {
+        ...state,
+        history: []
+    };
+};
+
 const reducer = (state, action) => {
     switch (action.type) {
         case "SET_PLAYERS": return setPlayers(state, action);
@@ -74,6 +84,7 @@ const reducer = (state, action) => {
         case "RESET_PLAYERS": return initial;
         case "MAKE_TEAMS": return makeTeams(state, action);
         case "SET_TEAM_SETTINGS": return setSettings(state, action);
+        case "RESET_HISTORY": return resetHistory(state);
         default: return state;
     }
 };

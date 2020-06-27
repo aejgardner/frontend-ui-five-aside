@@ -1,6 +1,14 @@
 import axios from "../axios";
 
-import { setPlayers, addPlayer, resetPlayers, editPlayer, removePlayer, makeTeams } from "./state";
+import {
+    setPlayers,
+    addPlayer,
+    resetPlayers,
+    editPlayer,
+    removePlayer,
+    makeTeams,
+    resetHistory
+} from "./state";
 
 // gets the list of players from the database, returns an array of objects to be used in the state action
 export const getPlayers = () => dispatch => {
@@ -51,5 +59,14 @@ export const assignTeams = () => dispatch => {
     axios.get("/players/teams").then(({ data }) => {
         const players = data
         dispatch(makeTeams(players));
+    });
+};
+
+// requests to matches table in db
+
+// resets the database, returns nothing, calls the resetHistory state action
+export const deleteHistory = () => dispatch => {
+    axios.delete("/previous-matches").then(() => {
+        dispatch(resetHistory());
     });
 };

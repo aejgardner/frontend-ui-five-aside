@@ -45,3 +45,9 @@ export const saveTeamSettings = (data) => {
         settings: data,
     };
 };
+
+export const resetHistory = () => {
+    return {
+        type: "RESET_HISTORY",
+    };
+};

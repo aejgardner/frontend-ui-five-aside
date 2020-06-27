@@ -61,7 +61,7 @@ class History extends Component {
                         <button
                             onClick={this.handleClearHistory}
                             className="btn btn-red clear-history-btn"
-                            style={{ display: visible ? "block" : "none" }}
+                            style={{ display: "block" }}
                         >Clear previous matches
                 </button>
                         <Link to="/">
