@@ -11,6 +11,7 @@ class Loading extends Component {
     render() {
         const { children, loaded } = this.props;
 
+        // If the loaded property in global state is set to true, the History component will be shown, otherwise there will just be a loading symbol while the API request is being made
         return loaded ? children : (
             <div className="loader"></div>
         );

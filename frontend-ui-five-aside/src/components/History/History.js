@@ -24,7 +24,7 @@ class History extends Component {
                 {/* if there is nothing in the matches table in the db, error message will show, otherwise the table will show */}
                 {!history.length ?
                     <>
-                        <h2 className="no-games-message">No games played!</h2>
+                        <h2 className="no-matches-message">No matches played!</h2>
                         <Link to="/">
                             <button
                                 className="btn btn-footer"
@@ -45,15 +45,15 @@ class History extends Component {
                                 </tr>
                             </thead>
                             <tbody>
-                                {history.map((game, i) => (
+                                {history.map((match, i) => (
                                     <tr key={i} className="table-row">
-                                        <td>{game.id}</td>
-                                        <td>{game.team_one_name}</td>
+                                        <td>{match.id}</td>
+                                        <td>{match.team_one_name}</td>
                                         <td>
-                                            {game.team_one_score} - {game.team_two_score}
+                                            {match.team_one_score} - {match.team_two_score}
                                         </td>
-                                        <td>{game.team_two_name}</td>
-                                        <td>{game.team_one_score > game.team_two_score ? game.team_one_name : game.team_two_name}</td>
+                                        <td>{match.team_two_name}</td>
+                                        <td>{match.team_one_score > match.team_two_score ? match.team_one_name : match.team_two_name}</td>
                                     </tr>
                                 ))}
                             </tbody>

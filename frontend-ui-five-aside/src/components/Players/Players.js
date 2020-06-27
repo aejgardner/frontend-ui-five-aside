@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-
 import { Link } from "react-router-dom";
-
 import Header from "../Header";
 import Player from "../Player";
 import PlayerRating from "../PlayerRating";
@@ -89,13 +87,14 @@ class Players extends Component {
                     <label className="label" htmlFor="player_name">Add a player:</label>
                     <input className="input player-input" id="player_name" onChange={this.handleChange} value={player_name} placeholder="Enter player's name"></input>
                     <p className="label">Player rating:</p>
+                    {/* this component contains the player rating range */}
                     <PlayerRating handleRange={(e) => this.handleRange(e)} fontColour="white" />
                     <button className="btn" style={{ visibility: hidden ? "hidden" : "visible" }}>Add</button>
-                    {/* This error message appears when the form data is invalid */}
+                    {/* this error message appears when the form data is invalid */}
                 </form>
                 {hidden ? <p className="alert-box">Please enter a player name and select a player rating.</p> : null}
                 <main className="main">
-                    { /* This checks there are players to show and renders either the players, or text which prompts the user to add players */}
+                    { /* this checks there are players to show and renders either the players, or text which prompts the user to add players */}
                     {players.length ?
                         <div className="players-wrapper">
                             <div className="btn-group">
@@ -108,7 +107,7 @@ class Players extends Component {
                                     </button>
                                 </Link>
                             </div>
-                            { /* This map iterates over each player and display a div with a player component for each one */}
+                            { /* this map iterates over each player and display a div with a player component for each one */}
                             {players.map(player => (
                                 <div className="players" key={player.id}>
                                     <Player player={player} />
