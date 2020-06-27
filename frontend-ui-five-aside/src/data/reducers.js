@@ -67,6 +67,15 @@ const setSettings = (state, { settings }) => {
 
 // History reducers
 
+// assigns the array of match objects saved in the db to the history property, loaded is changed to true making history component show on the screen
+const saveHistory = (state, { history }) => {
+    return {
+        ...state,
+        history: history,
+        loaded: true
+    };
+};
+
 // resets history to an empty array while preserving rest of the current state
 const resetHistory = (state) => {
     return {
@@ -84,6 +93,7 @@ const reducer = (state, action) => {
         case "RESET_PLAYERS": return initial;
         case "MAKE_TEAMS": return makeTeams(state, action);
         case "SET_TEAM_SETTINGS": return setSettings(state, action);
+        case "SAVE_HISTORY": return saveHistory(state, action);
         case "RESET_HISTORY": return resetHistory(state);
         default: return state;
     }

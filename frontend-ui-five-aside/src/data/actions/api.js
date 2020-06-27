@@ -7,7 +7,8 @@ import {
     editPlayer,
     removePlayer,
     makeTeams,
-    resetHistory
+    resetHistory,
+    saveHistory
 } from "./state";
 
 // gets the list of players from the database, returns an array of objects to be used in the state action
@@ -63,6 +64,14 @@ export const assignTeams = () => dispatch => {
 };
 
 // requests to matches table in db
+
+// gets the list of matches from the database, returns an array of objects to be used in the state action
+export const getPreviousMatches = () => dispatch => {
+    axios.get("/previous-matches").then(({ data }) => {
+        const history = data;
+        dispatch(saveHistory(history));
+    });
+};
 
 // resets the database, returns nothing, calls the resetHistory state action
 export const deleteHistory = () => dispatch => {

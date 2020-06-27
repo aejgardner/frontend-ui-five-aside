@@ -46,6 +46,13 @@ export const saveTeamSettings = (data) => {
     };
 };
 
+export const saveHistory = (history) => {
+    return {
+        type: "SAVE_HISTORY",
+        history: history,
+    };
+};
+
 export const resetHistory = () => {
     return {
         type: "RESET_HISTORY",
