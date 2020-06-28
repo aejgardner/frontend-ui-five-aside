@@ -24,7 +24,7 @@ class History extends Component {
                 {/* if there is nothing in the matches table in the db, error message will show, otherwise the table will show */}
                 {!history.length ?
                     <>
-                        <h2 className="no-matches-message">No matches played!</h2>
+                        <h2 className="alert-message">No matches played!</h2>
                         <Link to="/">
                             <button
                                 className="btn btn-footer"

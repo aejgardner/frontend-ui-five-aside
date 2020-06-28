@@ -13,6 +13,7 @@ class Teams extends Component {
             team_two_score: "",
             team_one_name: this.props.team_one_name,
             team_two_name: this.props.team_two_name,
+            saved: false
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -45,12 +46,16 @@ class Teams extends Component {
             team_two_score: "",
             team_one_name: this.props.team_one_name,
             team_two_name: this.props.team_two_name,
+            saved: true
         })
+
+        // hide the saved message after 2 seconds
+        setTimeout(() => this.setState({ saved: false }), 2000);
     }
 
     render() {
         // destructuring local state
-        const { team_one_score, team_two_score } = this.state;
+        const { team_one_score, team_two_score, saved } = this.state;
 
         // destructuring the props object
         const { players, team_one_name, team_two_name, team_one_colour, team_two_colour } = this.props;
@@ -67,6 +72,7 @@ class Teams extends Component {
         return (
             <div className="background-image">
                 <Header>Teams</Header>
+                {saved ? <p className="alert-message">Match saved!</p> : null}
                 <div className="teams-wrapper">
                     <TeamGroup
                         kitColour={team_one_colour}

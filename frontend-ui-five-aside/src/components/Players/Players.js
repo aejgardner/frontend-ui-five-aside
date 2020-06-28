@@ -114,7 +114,7 @@ class Players extends Component {
                             ))}
                         </div>
                         :
-                        <p className="error">There are no players, add some above to get creating your teams!</p>
+                        <p className="error-message">There are no players, add some above to get creating your teams!</p>
                     }
                     <div className="settings-and-prev-btn">
                         <Settings
