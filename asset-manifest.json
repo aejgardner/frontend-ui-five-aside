@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/frontend-ui-five-aside/static/css/main.af73c009.chunk.css",
+    "main.js": "/frontend-ui-five-aside/static/js/main.26b402f8.chunk.js",
+    "main.js.map": "/frontend-ui-five-aside/static/js/main.26b402f8.chunk.js.map",
+    "runtime-main.js": "/frontend-ui-five-aside/static/js/runtime-main.4a214453.js",
+    "runtime-main.js.map": "/frontend-ui-five-aside/static/js/runtime-main.4a214453.js.map",
+    "static/js/2.9ba2b8f6.chunk.js": "/frontend-ui-five-aside/static/js/2.9ba2b8f6.chunk.js",
+    "static/js/2.9ba2b8f6.chunk.js.map": "/frontend-ui-five-aside/static/js/2.9ba2b8f6.chunk.js.map",
+    "index.html": "/frontend-ui-five-aside/index.html",
+    "precache-manifest.c28f1918d01c0b4293a46f29b458fe6e.js": "/frontend-ui-five-aside/precache-manifest.c28f1918d01c0b4293a46f29b458fe6e.js",
+    "service-worker.js": "/frontend-ui-five-aside/service-worker.js",
+    "static/css/main.af73c009.chunk.css.map": "/frontend-ui-five-aside/static/css/main.af73c009.chunk.css.map",
+    "static/js/2.9ba2b8f6.chunk.js.LICENSE.txt": "/frontend-ui-five-aside/static/js/2.9ba2b8f6.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/frontend-ui-five-aside/static/media/stadium.d32682d2.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4a214453.js",
+    "static/js/2.9ba2b8f6.chunk.js",
+    "static/css/main.af73c009.chunk.css",
+    "static/js/main.26b402f8.chunk.js"
+  ]
+}
