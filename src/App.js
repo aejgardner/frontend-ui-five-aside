@@ -10,7 +10,7 @@ import {
 } from "react-router-dom";
 
 const App = () => (
-  <Router basename="/">
+  <Router >
     <React.Fragment>
       <Route exact path="/" component={Players} />
       <Route path="/team-sheet" component={Teams} />
