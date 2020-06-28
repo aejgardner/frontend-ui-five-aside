@@ -74,7 +74,7 @@ Plans for future features:
 
 * I attempted to store each team's players in the database to be used in the history table. To do so I added two columns with the type of JSON in Laravel. While I could store the player name arrays as JSON, I could not find a way to convert them back to arrays, even after using the $casts variable to signify this. This sadly meant that when retrieving the data I couldn't do anything with it. This is something I would like to address as the advantages of storing lists in databases are clear.
 * I used a combination of CSS Grid and Flexbox for my Settings component, which made responsivity very fiddly. Style refactoring would help lessen this issue.
-* A style methodology such as BEMM or the use of SASS would help standardise classes, making class names more informative and ensuring there isn't more than one class doing basically the same thing.
+* A style methodology such as BEM or the use of SASS would help standardise classes, making class names more informative and ensuring there isn't more than one class doing basically the same thing.
 * As users are all making requests to the same database, it is clear that some form of registration is necessary so that, for instance, when a user clears their list of players this does not happen for other users players lists. At present any changes made by a user affect all users, which defeats the object of saving players in a database.
 
 ## Version Management
